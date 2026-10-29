@@ -1,0 +1,620 @@
+/* ==========================================================================
+   FoodVerse-AI — Premium Culinary Theme & Button System
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Modern Mesh Background Canvas (Light & Dark)
+   -------------------------------------------------------------------------- */
+body {
+  background-color: #f7faf9 !important;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.09) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(13, 148, 136, 0.08) 0px, transparent 45%),
+    radial-gradient(at 50% 100%, rgba(245, 158, 11, 0.06) 0px, transparent 55%),
+    radial-gradient(at 90% 85%, rgba(5, 150, 105, 0.07) 0px, transparent 50%) !important;
+  background-attachment: fixed !important;
+}
+
+.theme-dark body,
+.app-shell.theme-dark {
+  background-color: #070e17 !important;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.14) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(13, 148, 136, 0.12) 0px, transparent 45%),
+    radial-gradient(at 50% 100%, rgba(245, 158, 11, 0.07) 0px, transparent 55%),
+    radial-gradient(at 85% 85%, rgba(6, 95, 70, 0.15) 0px, transparent 50%) !important;
+  background-attachment: fixed !important;
+}
+
+/* --------------------------------------------------------------------------
+   2. Translucent Glassmorphism Panels & Surfaces
+   -------------------------------------------------------------------------- */
+.sidebar {
+  background: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border-right: 1px solid rgba(226, 232, 240, 0.8) !important;
+}
+
+.theme-dark .sidebar {
+  background: rgba(11, 20, 36, 0.92) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.topbar {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8) !important;
+}
+
+.theme-dark .topbar {
+  background: rgba(11, 20, 36, 0.9) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.panel, 
+.metric-card {
+  background: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(226, 232, 240, 0.85) !important;
+  box-shadow: 
+    0 10px 25px -5px rgba(15, 23, 42, 0.04),
+    0 2px 6px -1px rgba(15, 23, 42, 0.02) !important;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.theme-dark .panel,
+.theme-dark .metric-card {
+  background: rgba(16, 28, 48, 0.88) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.45) !important;
+}
+
+.metric-card:hover {
+  transform: translateY(-3px) !important;
+  border-color: rgba(16, 185, 129, 0.4) !important;
+  box-shadow: 
+    0 14px 28px -6px rgba(5, 150, 105, 0.12),
+    0 4px 10px -2px rgba(5, 150, 105, 0.05) !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. Elevated Button System
+   -------------------------------------------------------------------------- */
+
+/* Primary Button — Multidimensional Emerald Gradient & Inset Highlight */
+.primary-button {
+  background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%) !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.015em !important;
+  padding: 11px 22px !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 
+    0 1px 0 rgba(255, 255, 255, 0.35) inset,
+    0 4px 14px -1px rgba(5, 150, 105, 0.42),
+    0 2px 4px rgba(0, 0, 0, 0.04) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.primary-button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.primary-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #34d399 0%, #059669 45%, #065f46 100%) !important;
+  box-shadow: 
+    0 1px 0 rgba(255, 255, 255, 0.45) inset,
+    0 8px 24px -2px rgba(5, 150, 105, 0.58),
+    0 4px 8px rgba(0, 0, 0, 0.08) !important;
+  transform: translateY(-2px) !important;
+  filter: brightness(1.03);
+}
+
+.primary-button:active:not(:disabled) {
+  transform: translateY(0) scale(0.985) !important;
+  box-shadow: 
+    0 1px 0 rgba(255, 255, 255, 0.15) inset,
+    0 2px 6px rgba(5, 150, 105, 0.35) !important;
+}
+
+.primary-button:disabled {
+  opacity: 0.55 !important;
+  filter: grayscale(0.2) !important;
+  cursor: not-allowed !important;
+}
+
+/* Secondary Button — Frosted Surface with Emerald Accent */
+.secondary-button {
+  background: rgba(255, 255, 255, 0.85) !important;
+  color: var(--color-text-main) !important;
+  font-weight: 600 !important;
+  border: 1px solid rgba(203, 213, 225, 0.85) !important;
+  border-radius: 12px !important;
+  padding: 10px 20px !important;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04) !important;
+  backdrop-filter: blur(8px) !important;
+  transition: all 0.2s ease !important;
+}
+
+.secondary-button:hover:not(:disabled) {
+  background: #ecfdf5 !important;
+  border-color: #6ee7b7 !important;
+  color: #047857 !important;
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.15) !important;
+  transform: translateY(-1px) !important;
+}
+
+.theme-dark .secondary-button {
+  background: rgba(21, 34, 56, 0.85) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  color: #f1f5f9 !important;
+}
+
+.theme-dark .secondary-button:hover:not(:disabled) {
+  background: rgba(16, 185, 129, 0.18) !important;
+  border-color: #10b981 !important;
+  color: #34d399 !important;
+}
+
+/* Welcome Hero Button — Glowing Pearl Pill */
+.welcome-banner .primary-button {
+  background: #ffffff !important;
+  color: #065f46 !important;
+  font-weight: 700 !important;
+  border: none !important;
+  box-shadow: 
+    0 4px 16px rgba(0, 0, 0, 0.18),
+    0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+.welcome-banner .primary-button:hover:not(:disabled) {
+  background: #f0fdf4 !important;
+  color: #047857 !important;
+  box-shadow: 
+    0 8px 24px rgba(0, 0, 0, 0.28),
+    0 2px 6px rgba(0, 0, 0, 0.12) !important;
+  transform: translateY(-2px) scale(1.02) !important;
+}
+
+/* Nav Item Active State */
+.nav-active {
+  background: linear-gradient(135deg, #059669 0%, #0d9488 100%) !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  box-shadow: 
+    0 1px 0 rgba(255, 255, 255, 0.25) inset,
+    0 6px 18px -2px rgba(5, 150, 105, 0.4) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.nav-item:hover:not(.nav-active) {
+  background: rgba(16, 185, 129, 0.08) !important;
+  color: #059669 !important;
+  transform: translateX(4px) !important;
+}
+
+.theme-dark .nav-item:hover:not(.nav-active) {
+  background: rgba(16, 185, 129, 0.12) !important;
+  color: #34d399 !important;
+}
+
+/* Icon Buttons (Theme toggle, notifications, close) */
+.icon-button {
+  background: rgba(255, 255, 255, 0.75) !important;
+  border: 1px solid var(--color-border) !important;
+  backdrop-filter: blur(8px) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03) !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.icon-button:hover {
+  background: #ecfdf5 !important;
+  border-color: #a7f3d0 !important;
+  color: #059669 !important;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.2) !important;
+  transform: translateY(-1px) scale(1.04) !important;
+}
+
+.theme-dark .icon-button {
+  background: rgba(21, 34, 56, 0.75) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.theme-dark .icon-button:hover {
+  background: rgba(16, 185, 129, 0.16) !important;
+  border-color: #10b981 !important;
+  color: #34d399 !important;
+}
+
+/* Feature Row Clickable Cards */
+.feature-row {
+  transition: all 0.22s ease !important;
+  border-radius: 12px !important;
+}
+
+.feature-row:hover {
+  background: rgba(16, 185, 129, 0.06) !important;
+  border-color: rgba(16, 185, 129, 0.3) !important;
+  transform: translateX(5px) !important;
+}
+
+.theme-dark .feature-row:hover {
+  background: rgba(16, 185, 129, 0.1) !important;
+  border-color: rgba(16, 185, 129, 0.4) !important;
+}
+
+/* Welcome Hero Banner — Multi-stop Aurora */
+.welcome-banner {
+  background: linear-gradient(135deg, #044e3b 0%, #059669 40%, #0d9488 80%, #0284c7 100%) !important;
+  box-shadow: 
+    0 20px 40px -15px rgba(5, 150, 105, 0.42),
+    0 1px 0 rgba(255, 255, 255, 0.25) inset !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+/* API Status Pill Pulse */
+.api-pill.connected .status-dot {
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7) !important;
+  animation: dotPulse 2s infinite !important;
+}
+
+@keyframes dotPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+/* ==========================================================================
+   4. High-Contrast Output & Results Styling (Dark & Light Mode)
+   ========================================================================== */
+
+/* Layout Transition: When results are rendered, switch from centered placeholder to clean layout */
+.results-placeholder.has-results,
+.empty-state-panel.has-results {
+  display: block !important;
+  text-align: left !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+  padding: 30px !important;
+  min-height: 400px !important;
+}
+
+.results-placeholder.has-results p,
+.empty-state-panel.has-results p {
+  max-width: 100% !important;
+  text-align: left !important;
+}
+
+/* Result Heading */
+.result-heading {
+  text-align: left !important;
+  width: 100% !important;
+  margin-bottom: 22px !important;
+  padding-bottom: 16px !important;
+  border-bottom: 1px solid var(--color-border) !important;
+}
+
+.result-heading .eyebrow {
+  color: var(--color-primary) !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 4px !important;
+  display: block !important;
+}
+
+.theme-dark .result-heading .eyebrow {
+  color: #34d399 !important;
+}
+
+.result-heading h2 {
+  font-family: var(--font-heading) !important;
+  font-size: 1.5rem !important;
+  font-weight: 800 !important;
+  color: var(--color-text-main) !important;
+  margin: 4px 0 6px !important;
+  letter-spacing: -0.015em !important;
+}
+
+.theme-dark .result-heading h2 {
+  color: #ffffff !important;
+}
+
+.result-heading p {
+  font-size: 0.875rem !important;
+  color: var(--color-text-secondary) !important;
+  margin: 0 !important;
+}
+
+.theme-dark .result-heading p {
+  color: #cbd5e1 !important;
+}
+
+/* Headings inside Results */
+.results-placeholder h3,
+.meal-plan-results h3 {
+  font-family: var(--font-heading) !important;
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  color: var(--color-text-main) !important;
+  margin: 22px 0 10px !important;
+  text-align: left !important;
+  display: block !important;
+}
+
+.theme-dark .results-placeholder h3,
+.theme-dark .meal-plan-results h3 {
+  color: #f8fafc !important;
+}
+
+/* Lists inside Results */
+.results-placeholder ul,
+.results-placeholder ol,
+.meal-plan-results ul,
+.recipe-results ul,
+.recipe-results ol {
+  text-align: left !important;
+  padding-left: 22px !important;
+  margin-bottom: 16px !important;
+  width: 100% !important;
+}
+
+.results-placeholder li,
+.meal-plan-results li,
+.recipe-results li {
+  margin-bottom: 7px !important;
+  color: var(--color-text-secondary) !important;
+  line-height: 1.6 !important;
+  font-size: 0.875rem !important;
+}
+
+.theme-dark .results-placeholder li,
+.theme-dark .meal-plan-results li,
+.theme-dark .recipe-results li {
+  color: #cbd5e1 !important;
+}
+
+.results-placeholder li strong,
+.recipe-results li strong,
+.meal-card strong {
+  color: var(--color-text-main) !important;
+  font-weight: 700 !important;
+}
+
+.theme-dark .results-placeholder li strong,
+.theme-dark .recipe-results li strong,
+.theme-dark .meal-card strong,
+.theme-dark .results-placeholder p strong {
+  color: #ffffff !important;
+}
+
+.theme-dark .results-placeholder p {
+  color: #cbd5e1 !important;
+}
+
+/* Nutrition Grid (Confidence Score & Visual Metrics) */
+.nutrition-grid {
+  display: flex !important;
+  gap: 14px !important;
+  margin: 16px 0 20px !important;
+  width: 100% !important;
+}
+
+.nutrition-grid > div {
+  background: var(--color-card-subtle) !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: var(--radius-md) !important;
+  padding: 14px 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  box-shadow: var(--shadow-xs) !important;
+}
+
+.theme-dark .nutrition-grid > div {
+  background: rgba(21, 34, 56, 0.9) !important;
+  border: 1px solid rgba(16, 185, 129, 0.3) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+}
+
+.nutrition-grid strong {
+  font-size: 1.6rem !important;
+  font-weight: 800 !important;
+  color: var(--color-primary) !important;
+}
+
+.theme-dark .nutrition-grid strong {
+  color: #34d399 !important;
+}
+
+.nutrition-grid span {
+  font-size: 0.8125rem !important;
+  font-weight: 600 !important;
+  color: var(--color-text-secondary) !important;
+}
+
+.theme-dark .nutrition-grid span {
+  color: #cbd5e1 !important;
+}
+
+/* Macro Grid High-Contrast in Dark Mode */
+.theme-dark .macro-grid div {
+  background: rgba(21, 34, 56, 0.95) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+}
+
+.theme-dark .macro-grid strong {
+  color: #94a3b8 !important;
+}
+
+.theme-dark .macro-grid span {
+  color: #ffffff !important;
+}
+
+.theme-dark .macro-grid span small {
+  color: #94a3b8 !important;
+}
+
+/* Meal Plan Summary in Dark Mode */
+.theme-dark .nutrition-summary {
+  background: rgba(6, 78, 59, 0.4) !important;
+  border: 1px solid rgba(16, 185, 129, 0.35) !important;
+}
+
+.theme-dark .nutrition-summary h3 {
+  color: #34d399 !important;
+}
+
+.theme-dark .nutrition-summary > p {
+  color: #cbd5e1 !important;
+}
+
+.theme-dark .nutrition-summary .form-grid > div {
+  background: rgba(15, 25, 43, 0.95) !important;
+  border: 1px solid rgba(16, 185, 129, 0.35) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+.theme-dark .nutrition-summary .form-grid strong {
+  color: #34d399 !important;
+}
+
+.theme-dark .nutrition-summary .form-grid p {
+  color: #cbd5e1 !important;
+}
+
+/* Meal Cards in Dark Mode */
+.theme-dark .meal-card {
+  background: rgba(21, 34, 56, 0.92) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3) !important;
+}
+
+.theme-dark .meal-card h4 {
+  color: #34d399 !important;
+}
+
+.theme-dark .meal-card h3 {
+  color: #ffffff !important;
+}
+
+.theme-dark .meal-card p {
+  color: #cbd5e1 !important;
+}
+
+/* Recipe Results in Dark Mode */
+.theme-dark .recipe-results {
+  border-top-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+.theme-dark .recipe-results h2 {
+  color: #ffffff !important;
+}
+
+.theme-dark .recipe-results h3 {
+  color: #34d399 !important;
+}
+
+.theme-dark .recipe-results p {
+  color: #cbd5e1 !important;
+}
+
+/* Empty State / Initial "Results will appear here" visibility in Dark Mode */
+.theme-dark .empty-art {
+  background: rgba(16, 185, 129, 0.2) !important;
+  color: #34d399 !important;
+  border: 1px solid rgba(16, 185, 129, 0.4) !important;
+  box-shadow: 0 0 24px rgba(16, 185, 129, 0.25) !important;
+}
+
+.theme-dark .results-placeholder h3,
+.theme-dark .empty-state-panel h3 {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+.theme-dark .results-placeholder p,
+.theme-dark .empty-state-panel p {
+  color: #cbd5e1 !important;
+}
+
+.theme-dark .placeholder-lines span {
+  background: rgba(255, 255, 255, 0.16) !important;
+}
+
+.theme-dark .disclaimer {
+  background: rgba(15, 25, 43, 0.95) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #cbd5e1 !important;
+}
+
+.theme-dark .disclaimer svg {
+  color: #34d399 !important;
+}
+
+.theme-dark .disclaimer span {
+  color: #cbd5e1 !important;
+}
+
+/* Form inputs & controls in Dark Mode */
+.theme-dark input,
+.theme-dark select,
+.theme-dark textarea {
+  background: rgba(15, 25, 43, 0.95) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+}
+
+.theme-dark input:focus,
+.theme-dark select:focus,
+.theme-dark textarea:focus {
+  border-color: #10b981 !important;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25) !important;
+}
+
+.theme-dark .drop-zone {
+  background: rgba(15, 25, 43, 0.75) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.theme-dark .drop-zone:hover {
+  background: rgba(16, 185, 129, 0.1) !important;
+  border-color: #10b981 !important;
+}
+
+.theme-dark .drop-zone strong {
+  color: #ffffff !important;
+}
+
+.theme-dark .drop-zone span {
+  color: #94a3b8 !important;
+}
+
+.theme-dark .upload-icon {
+  background: rgba(16, 185, 129, 0.18) !important;
+  color: #34d399 !important;
+}
